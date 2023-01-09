@@ -1,0 +1,2 @@
+PowerShell -Command "Set-ExecutionPolicy Unrestricted" >> "C:\Users\weeih\AppData\Local\Temp\StartupLog.txt" 2>&1
+PowerShell "C:\Users\weeih\OneDrive\桌面\自動啟動\startup.ps1" >> "C:\Users\weeih\AppData\Local\Temp\StartupLog.txt" 2>&1
