@@ -1,5 +1,7 @@
 # 改垃圾桶樣式
 
+[圖片來源](https://mobile.twitter.com/kk19940324/status/1603719824911110146)
+
 ## Mac
 
 [ref](https://discussions.apple.com/thread/1853381)
