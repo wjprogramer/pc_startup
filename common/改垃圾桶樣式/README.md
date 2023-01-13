@@ -2,11 +2,30 @@
 
 [圖片來源](https://mobile.twitter.com/kk19940324/status/1603719824911110146)
 
-## Mac
+## ~~Mac~~
+
+> 改不了了，新版的 Dock 的 Resources 已經被移到 Read-only file system
+> 即使是 root 也不行
 
 [ref](https://discussions.apple.com/thread/1853381)
 
-1. In Finder `Command` + `Shift` + `G`, `/System/Library/CoreServices`
+降低安全性
+
+1. 完全關機
+1. M1 以上，使用長壓指紋辨識進入 Recovery Mode
+1. 選項
+1. 工具程式、Utility > 終端機、Terminal 
+1. `csrutil status` `csrutil disable`
+1. 重開機
+
+---
+
+如何在 Mac 上啟用 root 使用者或更改 root 密碼
+https://support.apple.com/zh-tw/HT204012
+
+---
+
+1. In Finder `Command` + `Shift` + `G`, `/System/Library/CoreServices` (直接進入 `/System/Library/CoreServices/Dock.app/Contents/Resources/` 即可)
 1. Right- (or control-) click "Dock", and click "Show package contents".
 1. Then go to Contents/Resources.
 1. You'll see "trashempty.png" and "trashfull.png"
