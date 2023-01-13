@@ -17,9 +17,9 @@
 
 [ref](https://www.computerhope.com/issues/ch001021.htm#win11)
 
-1. Right-click an empty area on the Windows desktop and select Personalize in the pop-up menu.
-1. On the right side of the Personalization window, click the Themes option.
-1. Scroll down to the Related Settings section and click the Desktop icon settings option.
+1. 個人化 Right-click an empty area on the Windows desktop and select Personalize in the pop-up menu.
+1. 布景主題 On the right side of the Personalization window, click the Themes option.
+1. 桌面圖示設定 Scroll down to the Related Settings section and click the Desktop icon settings option.
 1. In the Desktop Icon Settings window, select the "Recycle Bin (full)" or "Recycle Bin (empty)" icon and click the Change Icon button.
 1. In the Change Icon window, select an icon from the list of available icons, or click Browse and select an icon file on your computer.
 1. Click OK on each open window to save the icon change.
