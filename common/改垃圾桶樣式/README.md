@@ -18,6 +18,11 @@
 1. `csrutil status` `csrutil disable`
 1. 重開機
 
+```shell
+cd /System/Library/CoreServices/Dock.app/Contents/Resources
+sudo cp trashempty.png trashempty2.png trashempty2@2x.png trashempty@2x.png trashfull.png trashfull2.png trashfull2@2x.png trashfull@2x.png /System/Library/CoreServices/Dock.app/Contents/Resources
+```
+
 ---
 
 如何在 Mac 上啟用 root 使用者或更改 root 密碼
