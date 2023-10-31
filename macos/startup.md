@@ -92,6 +92,8 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 ~/.zshrc 內容
 
 ```.zshrc
+export PATH=~/development/flutter/bin:$PATH
+
 # 需找到 plugins 並手動新增，用空格分開
 plugins=(
     git zsh-autosuggestions # other plugins...
@@ -149,15 +151,27 @@ echo "------- Flutter -------" &&
 echo "# Download flutter" &&
 mkdir -p ~/development &&
 cd ~/development &&
-curl -L -o flutter.zip $flutterUrl &&
-unzip flutter.zip &&
-rm flutter.zip &&
+# curl -L -o flutter.zip $flutterUrl &&
+# unzip flutter.zip &&
+# rm flutter.zip &&
+git clone https://github.com/flutter/flutter.git -b stable &&
 
 echo "# Setup flutter" &&
 export PATH="$PATH:`pwd`/flutter/bin" &&
+source ~/.zshrc &&
+
+flutter precache && 
 flutter doctor &&
 
 echo "# Install fvm" &&
+
+# ------------------------------------------------
+echo "------- Android ENV -------" &&
+export PATH=~/Library/Android/sdk/tools:$PATH
+export PATH=~/Library/Android/sdk/platform-tools:$PATH
+
+# ------------------------------------------------
+
 
 
 
