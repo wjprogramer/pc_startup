@@ -1,5 +1,7 @@
 # MacOS Startup
 
+> 最後檢查日期: 2023/10/31
+
 ## Homebrew, Iterm2 \[Terminal\]
 
 ```shell
@@ -177,10 +179,26 @@ echo "------- Android ENV -------" &&
 brew install mas &&
 mas install 497799835 && # (mas search xcode) 這是 Xcode 的 ID
 mas install 443904275 && # ID of Line on app store
-
+mas install 899247664 && # ID of TestFlight on app store
+mas install 425424353 && # The Unarchiver (如果要解壓縮 RAR 等)
+# 應該不需要?
+# 超级右键-iRightMouse 1497428978
 
 ```
 
+- 系統偏好設定
+  - 滑鼠
+    - [x] 輔助按鈕、右鍵
+- Scroll Reverser (設定: 反轉垂直、套用裝置取消勾選軌跡板)
+- Xcode
+  - FileMerge 拖到 Dock
 
 
+## VS CODE
 
+設定 VS Code 字體
+
+`設定 > 功能 > 終端機 > Integrated: Font Family`
+
+```
+'SauceCodePro Nerd Font Mono', ... 其他字型
