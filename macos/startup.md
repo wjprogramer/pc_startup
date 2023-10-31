@@ -1,6 +1,7 @@
 # MacOS Startup
 
 ```shell
+# Env
 flutterUrl=https://storage.googleapis.com/flutter_infra_release/releases/stable/macos/flutter_macos_arm64_3.13.9-stable.zip
 
 # -----------------------------------------------------------------
@@ -9,11 +10,25 @@ echo "------- Install Iterm 2 -------"
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 brew tap homebrew/cask
 
-
 # -----------------------------------------------------------------
 
 
 
+# -----------------------------------------------------------------
+echo "------- Flutter -------"
+
+echo "# Download flutter"
+mkdir -p ~/development
+cd ~/development
+curl -L -o flutter.zip $flutterUrl
+unzip flutter.zip
+rm flutter.zip
+
+echo "# Setup flutter"
+export PATH="$PATH:`pwd`/flutter/bin"
+flutter doctor
+
+echo "# Install fvm"
 
 # -----------------------------------------------------------------
 echo "------- (終端機1) Install Iterm -------"
