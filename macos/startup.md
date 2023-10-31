@@ -148,9 +148,10 @@ brew install --cask firefox &&
 brew install --cask postman &&
 brew install --cask scroll-reverser &&
 brew install --cask obsidian &&
-brew install --cask drawio
-brew install --cask bitwarden
-brew install --cask chatbox
+brew install --cask drawio &&
+brew install --cask bitwarden &&
+brew install --cask chatbox &&
+brew install --cask raycast &&
 
 # ------------------------------------------------
 echo "------- Flutter -------" &&
