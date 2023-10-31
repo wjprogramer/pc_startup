@@ -80,6 +80,7 @@ echo $SHELL
 # oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" &&
 source ~/.zshrc &&
+cp ~/.zshrc ~/backup_default.zshrc &&
 vim ~/.zshrc &&
 
 # install powerlevel10k theme
