@@ -171,6 +171,8 @@ flutter precache &&
 flutter doctor &&
 
 echo "# Install fvm" &&
+brew tap leoafarias/fvm &&
+brew install fvm &&
 
 # ------------------------------------------------
 echo "------- Android ENV -------" &&
