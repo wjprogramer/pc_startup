@@ -16,7 +16,7 @@ brew tap homebrew/cask-fonts &&
 echo "------- (Terminal) Install Iterm2 -------" &&
 # https://home.gamer.com.tw/creationDetail.php?sn=4841894
 
-brew cask install iterm2 &&
+brew install --cask iterm2 &&
 brew tap homebrew/cask-fonts &&
 brew install svn &&
 
@@ -143,7 +143,9 @@ brew install --cask firefox &&
 brew install --cask postman && 
 brew install --cask scroll-reverser && 
 brew install --cask obsidian && 
-brew install --cask iterm2 &&
+brew install --cask drawio
+brew install --cask bitwarden
+brew install --cask chatbox
 
 # ------------------------------------------------
 echo "------- Flutter -------" &&
@@ -171,8 +173,10 @@ export PATH=~/Library/Android/sdk/tools:$PATH
 export PATH=~/Library/Android/sdk/platform-tools:$PATH
 
 # ------------------------------------------------
-
-
+echo "------- Android ENV -------" &&
+brew install mas &&
+mas install 497799835 && # (mas search xcode) 這是 Xcode 的 ID
+mas install 443904275 && # ID of Line on app store
 
 
 ```
