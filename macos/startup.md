@@ -53,10 +53,13 @@ echo "------- All complete, restart -------"
   設定路徑：`Preferences > Profiles > Colors > Color Presets...`
   ![](screenshots/iterm_2_setup_color_scheme.webp)
   ![](screenshots/iterm_2_setup_pick_color_scheme.webp)
+
   這邊要注意的是點選了檔案 import 以後並不會生效，還要再去 color preset 點選你剛 import 的 scheme 才會生效
+
 - 修改字型
   `Preferences > Profiles > Text > Change Font`
   ![](screenshots/iterm_2_setup_font.webp)
+
   請改成 SauceCodePro Nerd Font 或你自己下載的字型
 
 ## Check Iterm2 \[Terminal\]
@@ -122,7 +125,6 @@ POWERLEVEL9K_MODE='nerdfont-complete'
 source $ZSH/oh-my-zsh.sh
 ```
 
-
 ## Install packages
 
 ```shell
@@ -134,18 +136,18 @@ echo "------- Install homebrew packages -------" &&
 
 brew install svn &&
 brew install wget &&
-brew install git && 
-brew install youtube-dl && 
+brew install git &&
+brew install youtube-dl &&
 
 brew install --cask google-chrome &&
 brew install --cask sublime-text &&
 brew install --cask sourcetree &&
-brew install --cask visual-studio-code && 
-brew install --cask android-studio && 
-brew install --cask firefox && 
-brew install --cask postman && 
-brew install --cask scroll-reverser && 
-brew install --cask obsidian && 
+brew install --cask visual-studio-code &&
+brew install --cask android-studio &&
+brew install --cask firefox &&
+brew install --cask postman &&
+brew install --cask scroll-reverser &&
+brew install --cask obsidian &&
 brew install --cask drawio
 brew install --cask bitwarden
 brew install --cask chatbox
@@ -165,7 +167,7 @@ echo "# Setup flutter" &&
 export PATH="$PATH:`pwd`/flutter/bin" &&
 source ~/.zshrc &&
 
-flutter precache && 
+flutter precache &&
 flutter doctor &&
 
 echo "# Install fvm" &&
@@ -194,7 +196,6 @@ mas install 425424353 && # The Unarchiver (如果要解壓縮 RAR 等)
 - Xcode
   - FileMerge 拖到 Dock
 
-
 ## VS CODE
 
 設定 VS Code 字體
@@ -203,3 +204,4 @@ mas install 425424353 && # The Unarchiver (如果要解壓縮 RAR 等)
 
 ```
 'SauceCodePro Nerd Font Mono', ... 其他字型
+```
