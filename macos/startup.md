@@ -187,10 +187,16 @@ mas install 497799835 && # (mas search xcode) 這是 Xcode 的 ID
 mas install 443904275 && # ID of Line on app store
 mas install 899247664 && # ID of TestFlight on app store
 mas install 425424353 && # The Unarchiver (如果要解壓縮 RAR 等)
+
+# mas install 993841014 && # CopyLess 2, 剪貼簿管理工具，其他選擇：Maccy（付費）
+# 用 raycast 搜尋 clipboard history 就好了
+
 # 應該不需要?
-# 超级右键-iRightMouse 1497428978
+# - 超级右键-iRightMouse 1497428978
 
 ```
+
+## 需要手動的
 
 - 系統偏好設定
   - 滑鼠
@@ -199,7 +205,7 @@ mas install 425424353 && # The Unarchiver (如果要解壓縮 RAR 等)
 - Xcode
   - FileMerge 拖到 Dock
 
-## VS CODE
+### VS CODE
 
 設定 VS Code 字體
 
@@ -208,3 +214,39 @@ mas install 425424353 && # The Unarchiver (如果要解壓縮 RAR 等)
 ```
 'SauceCodePro Nerd Font Mono', ... 其他字型
 ```
+
+### Raycast
+
+> 有買 Pro 好像就不用手動？
+
+- Color Picker
+- Visual Studio Code
+- GitHub
+- Google Translate
+- ChatGPT
+- Google Search
+- Obsidian
+- Installed Extensions (安裝套件來檢視安裝了哪些套件...)
+
+---
+
+https://www.rorybowcott.com/post/my-top-10-raycast-extensions#viewer-9c38c
+
+- Bitwarden 
+- Homebrew 
+- Toolbox 
+- Change Case 
+- ColorSlurp 
+- Kill Process 
+- Lorem Ipsum 
+
+---
+
+- Open With 
+- Google Fonts
+- Unsplash 
+
+
+
+
+
