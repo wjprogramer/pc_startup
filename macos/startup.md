@@ -246,7 +246,21 @@ https://www.rorybowcott.com/post/my-top-10-raycast-extensions#viewer-9c38c
 - Google Fonts
 - Unsplash 
 
+### .zshrc
 
+```zshrc
+# 這三行解決： cocoa pods 問題
+# https://stackoverflow.com/questions/59405671/ios-cocoapods-requires-your-terminal-to-be-using-utf-8-encoding-after-latest
+export LANG=en_US.UTF-8
+export LANGUAGE=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+```
 
+### 其他
 
+這安裝會很久... 要注意
+
+```shell
+sudo gem install cocoapods
+```
 
