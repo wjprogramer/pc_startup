@@ -1,0 +1,1 @@
+https://stackoverflow.com/questions/64138572/pyenv-global-interpreter-not-working-on-windows10
