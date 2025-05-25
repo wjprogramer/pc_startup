@@ -1,1 +1,14 @@
 https://stackoverflow.com/questions/64138572/pyenv-global-interpreter-not-working-on-windows10
+
+---
+
+Everything 1.4.1.1026 免安裝中文版 - 取代Windows搜尋功能 
+https://www.azofreeware.com/2008/11/everything-120318-beta.html
+
+---
+
+在微軟新注音輸入法中做詞庫管理 
+https://bcc16.ncu.edu.tw/2/ci-msim/
+
+微軟注音一直亂選字？透過這個小技巧建立使用者詞庫降低選字頻率，免進設定！[CC字幕]
+https://www.youtube.com/watch?v=KNEH-lkCypU
