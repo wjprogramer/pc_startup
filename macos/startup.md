@@ -45,6 +45,12 @@ defaults write NSGlobalDomain com.apple.keyboard.fnState -bool true &&
 #     - [x] 勾選「將 F1, F2 等鍵用作標準功能鍵」(Use F1, F2, etc. keys as standard function keys)
 
 # ------------------------------------------------
+echo "------- 軌跡板：點一下來按一下（立即套用） -------" &&
+defaults write com.apple.AppleMultitouchTrackpad Clicking -bool true &&
+sudo defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true &&
+/System/Library/PrivateFrameworks/SystemAdministration.framework/Resources/activateSettings -u &&
+
+# ------------------------------------------------
 echo "------- All complete, restart -------"
 ```
 
@@ -69,6 +75,7 @@ echo "------- All complete, restart -------"
 
 ref
 
+- [讓 macOS 的 Terminal 又潮又實用：iTerm2 + oh-my-zsh + Powerlevel10k](https://www.onejar99.com/terminal-iterm2-zsh-powerlevel10k/#Step_1_iTerm2)
 - [超簡單！十分鐘打造漂亮又好用的 zsh command line 環境](https://medium.com/statementdog-engineering/prettify-your-zsh-command-line-prompt-3ca2acc967f)
 - [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
 
@@ -84,7 +91,9 @@ echo $SHELL
 ```shell
 # ------------------------------------------------
 # oh-my-zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" &&
+# oh-my-zsh 官方 repo 已遷至 ohmyzsh/ohmyzsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" &&
+# 舊的安裝連結：https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh
 source ~/.zshrc &&
 cp ~/.zshrc ~/backup_default.zshrc &&
 vim ~/.zshrc &&
@@ -146,7 +155,7 @@ git config --global user.email "weeihua1003@gmail.com" &&
 gh auth login &&  # 互動式，登入 GitHub
 
 brew install scrcpy &&
-brew install android-platform-tools &&
+brew install android-platform-tools &&  # adb 工具
 
 brew install --cask google-chrome &&
 brew install --cask sublime-text &&
@@ -180,9 +189,10 @@ export PATH=~/Library/Android/sdk/platform-tools:$PATH
 echo "------- Android ENV -------" &&
 brew install mas &&
 mas install 497799835 && # (mas search xcode) 這是 Xcode 的 ID
-mas install 443904275 && # ID of Line on app store
+mas install 539883307 && # ID of Line on app store
 mas install 899247664 && # ID of TestFlight on app store
 mas install 425424353 && # The Unarchiver (如果要解壓縮 RAR 等)
+mas install 1450874784 && # Transporter
 
 # mas install 993841014 && # CopyLess 2, 剪貼簿管理工具，其他選擇：Maccy（付費）
 # 用 raycast 搜尋 clipboard history 就好了
@@ -197,6 +207,8 @@ mas install 425424353 && # The Unarchiver (如果要解壓縮 RAR 等)
 - 系統偏好設定
   - 滑鼠
     - [x] 輔助按鈕、右鍵
+  - 軌跡板 (Trackpad)
+    - **追蹤速度** (Tracking Speed)：系統設定 > 軌跡板 > 軌跡板選項…（或 更多手勢 旁）
   - Touch ID：設定指紋解鎖／付款
 - **預設瀏覽器**：改為 Chrome
 - **Chrome 同步**：登入帳號時注意要同步哪些資料（書籤、密碼、擴充功能、分頁等），依隱私需求勾選
@@ -220,10 +232,12 @@ mas install 425424353 && # The Unarchiver (如果要解壓縮 RAR 等)
 > 有買 Pro 好像就不用手動？
 
 - Color Picker
-- Visual Studio Code
 - GitHub
 - Google Translate
 - ChatGPT
+- raycast-gemini
+- Bitwarden
+- Cursor
 - Google Search
 - Obsidian
 - Installed Extensions (安裝套件來檢視安裝了哪些套件...)
