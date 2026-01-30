@@ -131,6 +131,13 @@ echo "------- Install homebrew packages -------" &&
 brew install svn &&
 brew install wget &&
 brew install git &&
+brew install gh &&  # GitHub CLI
+
+# Git 與 GitHub（請改為你的 name / email）
+git config --global user.name "Jay Wu" &&
+git config --global user.email "weeihua1003@gmail.com" &&
+gh auth login &&  # 互動式，登入 GitHub
+
 brew install scrcpy &&
 brew install android-platform-tools &&
 
