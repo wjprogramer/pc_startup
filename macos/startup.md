@@ -1,6 +1,6 @@
 # MacOS Startup
 
-> 最後檢查日期: 2023/10/31
+> 最後檢查日期: 2026/01/31
 
 ## Homebrew, Iterm2 \[Terminal\]
 
