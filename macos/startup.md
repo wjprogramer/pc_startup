@@ -38,6 +38,13 @@ echo "Change zsh shell" &&
 chsh -s /bin/zsh &&
 
 # ------------------------------------------------
+echo "------- 鍵盤：F1/F2 等為標準功能鍵（生效需重開機） -------" &&
+defaults write NSGlobalDomain com.apple.keyboard.fnState -bool true &&
+# - 鍵盤 > Function Keys（功能鍵）
+#     - 路徑：蘋果選單  > 系統設定 > 鍵盤 > 鍵盤快速鍵… > 功能鍵
+#     - [x] 勾選「將 F1, F2 等鍵用作標準功能鍵」(Use F1, F2, etc. keys as standard function keys)
+
+# ------------------------------------------------
 echo "------- All complete, restart -------"
 ```
 
