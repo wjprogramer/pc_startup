@@ -10,16 +10,12 @@ mkdir -p ~/development/terminal
 # ------------------------------------------------
 echo "------- Install homebrew -------" &&
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" &&
-brew tap homebrew/cask &&
-brew tap homebrew/fonts &&
-brew tap homebrew/cask-fonts &&
 
 # ------------------------------------------------
 echo "------- (Terminal) Install Iterm2 -------" &&
 # https://home.gamer.com.tw/creationDetail.php?sn=4841894
 
 brew install --cask iterm2 &&
-brew tap homebrew/cask-fonts &&
 brew install svn &&
 
 # ------------------------------------------------
@@ -98,7 +94,8 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 ~/.zshrc 內容
 
 ```.zshrc
-export PATH=~/development/flutter/bin:$PATH
+# For zsh (add to ~/.zshrc). 請將 weijiewu 改為你的使用者名稱 (不能使用 `~`)：
+export PATH="/Users/weijiewu/fvm/bin:$PATH"
 
 # 需找到 plugins 並手動新增，用空格分開
 plugins=(
@@ -128,52 +125,37 @@ source $ZSH/oh-my-zsh.sh
 ## Install packages
 
 ```shell
-# Env
-flutterUrl=https://storage.googleapis.com/flutter_infra_release/releases/stable/macos/flutter_macos_arm64_3.13.9-stable.zip &&
-
 # ------------------------------------------------
 echo "------- Install homebrew packages -------" &&
 
 brew install svn &&
 brew install wget &&
 brew install git &&
-brew install youtube-dl &&
+brew install scrcpy &&
+brew install android-platform-tools &&
 
 brew install --cask google-chrome &&
 brew install --cask sublime-text &&
 brew install --cask sourcetree &&
-brew install --cask visual-studio-code &&
 brew install --cask android-studio &&
-brew install --cask firefox &&
-brew install --cask postman &&
+brew install --cask insomnia &&
 brew install --cask scroll-reverser &&
 brew install --cask obsidian &&
 brew install --cask drawio &&
 brew install --cask bitwarden &&
-brew install --cask chatbox &&
+brew install --cask youtube-downloader &&
+brew install --cask cursor &&
+brew install --cask betterdisplay &&
 brew install --cask raycast &&
+brew install cocoapods &&  # ai 建議用 homebrew 裝，比較不會有依賴問題
 
 # ------------------------------------------------
-echo "------- Flutter -------" &&
+echo "------- Flutter (FVM，官方建議用 script 安裝，見 https://fvm.app/documentation/getting-started/installation) -------" &&
+curl -fsSL https://fvm.app/install.sh | bash &&
 
-echo "# Download flutter" &&
-mkdir -p ~/development &&
-cd ~/development &&
-# curl -L -o flutter.zip $flutterUrl &&
-# unzip flutter.zip &&
-# rm flutter.zip &&
-git clone https://github.com/flutter/flutter.git -b stable &&
-
-echo "# Setup flutter" &&
-export PATH="$PATH:`pwd`/flutter/bin" &&
-source ~/.zshrc &&
-
-flutter precache &&
-flutter doctor &&
-
-echo "# Install fvm" &&
-brew tap leoafarias/fvm &&
-brew install fvm &&
+# 手動加 PATH 到 ~/.zshrc（請將 weijiewu 改為你的使用者名稱，勿用 ~）：
+# export PATH="/Users/weijiewu/fvm/bin:$PATH"
+# 然後執行：source ~/.zshrc
 
 # ------------------------------------------------
 echo "------- Android ENV -------" &&
@@ -201,13 +183,17 @@ mas install 425424353 && # The Unarchiver (如果要解壓縮 RAR 等)
 - 系統偏好設定
   - 滑鼠
     - [x] 輔助按鈕、右鍵
+  - Touch ID：設定指紋解鎖／付款
+- **預設瀏覽器**：改為 Chrome
+- **Chrome 同步**：登入帳號時注意要同步哪些資料（書籤、密碼、擴充功能、分頁等），依隱私需求勾選
 - Scroll Reverser (設定: 反轉垂直、套用裝置取消勾選軌跡板)
 - Xcode
   - FileMerge 拖到 Dock
 
-### VS CODE
+### Cursor
 
-設定 VS Code 字體
+- Auto-Run 改為 Run Everything：`設定 > Agents > Auto-Run > Auto-Run Mode` 選「Run Everything (Unsandboxed)」
+- 設定字體
 
 `設定 > 功能 > 終端機 > Integrated: Font Family`
 
