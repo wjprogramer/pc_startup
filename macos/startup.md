@@ -51,6 +51,12 @@ sudo defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking 
 /System/Library/PrivateFrameworks/SystemAdministration.framework/Resources/activateSettings -u &&
 
 # ------------------------------------------------
+echo "------- 鎖定畫面：螢幕休眠，電池 10 分鐘、接電 30 分鐘 -------" &&
+sudo pmset -b displaysleep 10 &&
+sudo pmset -c displaysleep 30 &&
+pmset -g && # 立即生效
+
+# ------------------------------------------------
 echo "------- All complete, restart -------"
 ```
 
@@ -210,6 +216,7 @@ mas install 1450874784 && # Transporter
   - 軌跡板 (Trackpad)
     - **追蹤速度** (Tracking Speed)：系統設定 > 軌跡板 > 軌跡板選項…（或 更多手勢 旁）
   - Touch ID：設定指紋解鎖／付款
+  - 螢幕休眠 (Display Sleep)：電池 10 分鐘、接電 30 分鐘（指令見上方安裝腳本）
 - **預設瀏覽器**：改為 Chrome
 - **Chrome 同步**：登入帳號時注意要同步哪些資料（書籤、密碼、擴充功能、分頁等），依隱私需求勾選
 - Scroll Reverser (設定: 反轉垂直、套用裝置取消勾選軌跡板)
